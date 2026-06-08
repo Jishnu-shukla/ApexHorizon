@@ -68,7 +68,7 @@ export default function Home() {
 
             {/* Content Button Controls */}
             <div className="mt-10 flex flex-wrap gap-4">
-              <button onClick={() => router.push('/products/ApexManagement')} className="rounded-xl cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 border border-transparent px-8 py-4 text-xs text-white font-bold tracking-wider uppercase transition-all duration-300 hover:from-blue-500 hover:to-indigo-500 hover:scale-[1.02] active:scale-95 shadow-lg shadow-blue-500/25">
+              <button onClick={() => router.push('/products/apexmanagement')} className="rounded-xl cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 border border-transparent px-8 py-4 text-xs text-white font-bold tracking-wider uppercase transition-all duration-300 hover:from-blue-500 hover:to-indigo-500 hover:scale-[1.02] active:scale-95 shadow-lg shadow-blue-500/25">
                 Explore Apex Management
               </button>
               <button onClick={() => router.push('/#contact')} className="rounded-xl border cursor-pointer border-zinc-200 bg-white px-8 py-4 text-xs text-zinc-700 font-bold tracking-wider uppercase backdrop-blur-md transition-all duration-300 hover:text-zinc-900 hover:bg-zinc-50 hover:border-zinc-300 hover:shadow-md hover:scale-[1.02] active:scale-95">

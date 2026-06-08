@@ -13,7 +13,7 @@ const products = [
     title: 'Apex Management',
     description: 'The ultimate offline-first retail and billing terminal. Manage inventory, generate GST invoices, and dispatch WhatsApp receipts directly from a native executable.',
     icon: '/apexmanagement.png',
-    link: '/products/ApexManagement',
+    link: '/products/apexmanagement',
     status: 'Live',
     gradient: 'from-blue-600 to-indigo-600',
     tags: ['Desktop Application', 'Offline First', 'Billing']

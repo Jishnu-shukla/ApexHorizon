@@ -8,6 +8,11 @@ export async function POST(req: NextRequest) {
     
     // Connect to MongoDB
     await connectToDatabase();
+
+    const existsUser = await User.findOne({ email: body.email });
+    if (existsUser) {
+      return NextResponse.json({ error: 'User already exists' }, { status: 400 });
+    }
     
     // Save the user/lead information to MongoDB
     const newUser = new User({
@@ -20,8 +25,7 @@ export async function POST(req: NextRequest) {
     
     await newUser.save();
 
-    // Return the URL for the client to download
-    return NextResponse.json({ success: true, downloadUrl: '/ApexManagement.rar' });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Failed to process download request:', error);
     return NextResponse.json({ error: 'Failed to process request' }, { status: 500 });

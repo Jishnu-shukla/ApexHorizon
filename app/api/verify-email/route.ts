@@ -1,8 +1,10 @@
 import User from "@/models/user"
 import { NextResponse } from "next/server"
+import { connectToDatabase } from '@/lib/database';
 
 export async function POST(req: Request) {
     try {
+        await connectToDatabase();
         const { email } = await req.json()
     
         if(!email) {
@@ -21,7 +23,14 @@ export async function POST(req: Request) {
         }
     
         return NextResponse.json(
-            { message: "Get user successfully!"},
+            { 
+              message: "Get user successfully!",
+              name: user.name,
+              email: user.email,
+              mobile: user.mobile || "",
+              business: user.business || "",
+              product: user.product
+            },
             { status: 200 }
         )
     } catch (error) {

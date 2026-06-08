@@ -15,7 +15,7 @@ export default function Navbar() {
         <Image src="/logo.png" alt="Apex Horizon" width={180} height={28} className="cursor-pointer hover:opacity-90 transition-opacity" />
       </Link>
       <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-zinc-600">
-        <Link href="/products/ApexManagement" className="hover:text-blue-600 transition-colors">Products</Link>
+        <Link href="/products" className="hover:text-blue-600 transition-colors">Products</Link>
         <Link href="/#services" className="hover:text-blue-600 transition-colors">Services</Link>
         <Link href="/#testimonials" className="hover:text-blue-600 transition-colors">Testimonials</Link>
         <Link href="/#contact" className="hover:text-blue-600 transition-colors">Contact</Link>
